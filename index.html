@@ -1,212 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact — Afnan | Video Editor</title>
+<title>Afnan — Video Editor</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
+    margin:0;
     background:#080808;
-    color:#f5f5f5;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-.container{
-    width:min(1100px,90%);
-    margin:auto;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
 }
 
 nav{
-    height:78px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    border-bottom:1px solid #1d1d1d;
+    padding:25px;
+    border-bottom:1px solid #222;
 }
 
-.logo{
-    font-size:19px;
-    font-weight:800;
-    letter-spacing:4px;
-}
-
-.logo span{
-    display:block;
-    font-size:7px;
-    letter-spacing:3px;
-    color:#888;
-    margin-top:-2px;
-}
-
-.navlinks{
-    display:flex;
-    gap:28px;
-    font-size:13px;
-    color:#999;
-}
-
-.navlinks a:last-child{
-    color:#fff;
-}
-
-main{
-    padding:100px 0;
-}
-
-.label{
-    color:#777;
-    font-size:11px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    margin-bottom:20px;
-}
-
-h1{
-    font-size:clamp(55px,9vw,105px);
-    line-height:.9;
-    letter-spacing:-5px;
-    max-width:900px;
-}
-
-.accent{
-    color:#b8ff5c;
-}
-
-.intro{
-    color:#888;
-    max-width:520px;
-    font-size:15px;
-    line-height:1.7;
-    margin:30px 0 55px;
-}
-
-.contact-box{
-    border:1px solid #292929;
-    border-radius:20px;
-    overflow:hidden;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-}
-
-.contact-info{
-    padding:40px;
-    background:#0d0d0d;
-}
-
-.contact-info h2{
-    font-size:27px;
-    margin-bottom:12px;
-}
-
-.contact-info p{
-    color:#777;
-    font-size:13px;
-    line-height:1.7;
-}
-
-.contact-links{
-    margin-top:30px;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
-
-.contact-link{
-    border:1px solid #292929;
-    padding:18px;
-    border-radius:12px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    transition:.2s;
-}
-
-.contact-link:hover{
-    border-color:#777;
-    transform:translateX(4px);
-}
-
-.contact-link small{
-    display:block;
-    color:#666;
-    font-size:9px;
-    letter-spacing:2px;
-    margin-bottom:5px;
-}
-
-.contact-link strong{
+nav a{
+    color:#aaa;
+    text-decoration:none;
+    margin:0 12px;
     font-size:14px;
 }
 
-.project{
-    padding:40px;
-    background:radial-gradient(
-        circle at 70% 30%,
-        #222,
-        transparent 35%
-    ),#090909;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+main{
+    padding:100px 20px;
 }
 
-.project-number{
-    color:#555;
-    font-size:11px;
-    letter-spacing:2px;
-    margin-bottom:35px;
+h1{
+    font-size:60px;
+    margin:0;
 }
 
-.project h2{
-    font-size:45px;
-    line-height:1;
-    letter-spacing:-3px;
-    margin-bottom:18px;
+.green{
+    color:#b8ff5c;
 }
 
-.project p{
-    color:#777;
-    font-size:13px;
+p{
+    color:#888;
+    font-size:16px;
     line-height:1.7;
-    margin-bottom:30px;
+    max-width:500px;
+    margin:25px auto;
 }
 
 .btn{
     display:inline-block;
-    width:max-content;
-    padding:14px 22px;
-    border-radius:100px;
-    background:#f5f5f5;
+    background:white;
     color:#080808;
-    font-size:13px;
+    padding:14px 22px;
+    border-radius:30px;
+    text-decoration:none;
+    margin:8px;
 }
 
 footer{
-    border-top:1px solid #171717;
-    padding:30px 0;
-    display:flex;
-    justify-content:space-between;
+    margin-top:100px;
+    padding:25px;
+    border-top:1px solid #222;
     color:#666;
-    font-size:11px;
+    font-size:12px;
 }
+</style>
+</head>
 
-@media(max-width:700px){
+<body>
 
-    nav{
-        height:65
+<nav>
+<a href="index.html">Home</a>
+<a href="work.html">Work</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<main>
+
+<p>VIDEO EDITOR · SHORT-FORM CONTENT</p>
+
+<h1>
+I make videos<br>
+people want to <span class="green">watch.</span>
+</h1>
+
+<p>
+Clean, engaging and purposeful video edits for creators,
+brands and businesses.
+</p>
+
+<a class="btn" href="work.html">View My Work →</a>
+
+<a class="btn" href="contact.html">Let's Talk</a>
+
+</main>
+
+<footer>
+© 2026 AFNAN · VIDEO EDITOR
+</footer>
+
+</body>
+</html>
