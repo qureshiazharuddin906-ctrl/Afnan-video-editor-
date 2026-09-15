@@ -1,118 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contact — Afnan | Video Editor</title>
 
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-  background:#080808;
-  color:#f5f5f5;
-  font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#f5f5f5;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 a{
-  color:inherit;
-  text-decoration:none;
+    color:inherit;
+    text-decoration:none;
 }
 
 .container{
-  width:min(1100px,90%);
-  margin:auto;
+    width:min(1100px,90%);
+    margin:auto;
 }
 
-/* NAV */
-
 nav{
-  height:78px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom:1px solid #1d1d1d;
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #1d1d1d;
 }
 
 .logo{
-  font-size:19px;
-  font-weight:800;
-  letter-spacing:4px;
+    font-size:19px;
+    font-weight:800;
+    letter-spacing:4px;
 }
 
 .logo span{
-  display:block;
-  font-size:7px;
-  letter-spacing:3px;
-  color:#888;
-  margin-top:-2px;
+    display:block;
+    font-size:7px;
+    letter-spacing:3px;
+    color:#888;
+    margin-top:-2px;
 }
 
 .navlinks{
-  display:flex;
-  gap:28px;
-  font-size:13px;
-  color:#999;
+    display:flex;
+    gap:28px;
+    font-size:13px;
+    color:#999;
 }
 
-.navlinks a:nth-child(3){
-  color:#fff;
+.navlinks a:last-child{
+    color:#fff;
 }
-
-/* MAIN */
 
 main{
-  padding:110px 0;
-  min-height:calc(100vh - 78px);
+    padding:100px 0;
 }
 
 .label{
-  color:#777;
-  font-size:11px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin-bottom:20px;
+    color:#777;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:20px;
 }
 
 h1{
-  font-size:clamp(55px,9vw,105px);
-  line-height:.9;
-  letter-spacing:-5px;
-  max-width:850px;
+    font-size:clamp(55px,9vw,105px);
+    line-height:.9;
+    letter-spacing:-5px;
+    max-width:900px;
 }
 
 .accent{
-  color:#b8ff5c;
+    color:#b8ff5c;
 }
 
 .intro{
-  color:#888;
-  max-width:520px;
-  font-size:15px;
-  line-height:1.7;
-  margin:30px 0 50px;
+    color:#888;
+    max-width:520px;
+    font-size:15px;
+    line-height:1.7;
+    margin:30px 0 55px;
 }
 
-/* CONTACT BOX */
-
 .contact-box{
-  border:1px solid #292929;
-  border-radius:20px;
-  overflow:hidden;
-  display:grid;
-  grid-template-columns:1fr 1fr;
+    border:1px solid #292929;
+    border-radius:20px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:1fr 1fr;
 }
 
 .contact-info{
-  padding:40px;
-  background:#0d0d0d;
+    padding:40px;
+    background:#0d0d0d;
 }
 
 .contact-info h2{
-  font-size:25px;
-  margin-bottom:12px
+    font-size:27px;
+    margin-bottom:12px;
+}
+
+.contact-info p{
+    color:#777;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.contact-links{
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.contact-link{
+    border:1px solid #292929;
+    padding:18px;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.2s;
+}
+
+.contact-link:hover{
+    border-color:#777;
+    transform:translateX(4px);
+}
+
+.contact-link small{
+    display:block;
+    color:#666;
+    font-size:9px;
+    letter-spacing:2px;
+    margin-bottom:5px;
+}
+
+.contact-link strong{
+    font-size:14px;
+}
+
+.project{
+    padding:40px;
+    background:radial-gradient(
+        circle at 70% 30%,
+        #222,
+        transparent 35%
+    ),#090909;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.project-number{
+    color:#555;
+    font-size:11px;
+    letter-spacing:2px;
+    margin-bottom:35px;
+}
+
+.project h2{
+    font-size:45px;
+    line-height:1;
+    letter-spacing:-3px;
+    margin-bottom:18px;
+}
+
+.project p{
+    color:#777;
+    font-size:13px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    width:max-content;
+    padding:14px 22px;
+    border-radius:100px;
+    background:#f5f5f5;
+    color:#080808;
+    font-size:13px;
+}
+
+footer{
+    border-top:1px solid #171717;
+    padding:30px 0;
+    display:flex;
+    justify-content:space-between;
+    color:#666;
+    font-size:11px;
+}
+
+@media(max-width:700px){
+
+    nav{
+        height:65px;
+    }
+
+    .navlinks{
+        gap:14px;
+        font-size:11px;
+    }
+
+    main{
+        padding:70px 0;
+    }
+
+    h1{
+        font-size:60px;
+        letter-spacing:-4px;
+    }
+
+    .intro{
+        font-size:14px;
+    }
+
+    .contact-box{
+        grid-template-columns:1fr;
+    }
+
+    .contact-info,
+    .project{
+        padding:28px;
+    }
+
+    .project h2{
+        font-size:38px;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:10px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+
+<a href="index.html" class="logo">
+AFNAN
+<span>VIDEO EDITOR</span>
+</a>
+
+<div class="navlinks">
+<a href="index.html">Home</a>
+<a href="work.html">Work</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+
+<main>
+
+<div class="label">
+Let's work together
+</div>
+
+<h1>
+Have a project?<br>
+Let's make it <span class="accent">happen.</span>
+</h1>
+
+<p class="intro">
+Got raw footage, a reel idea or a brand that needs better content?
+Tell me what you're working on.
+</p>
+
+
+<div class="contact-box">
+
+
+<div class="contact-info">
+
+<h2>Get in touch.</h2>
+
+<p>
+For editing projects, collaborations and inquiries,
+reach out through your preferred platform.
+</p>
+
+
+<div class="contact-links">
+
+<a href="#" class="contact-link">
+
+<div>
+<small>MESSAGE</small>
+<strong>Instagram ↗</strong>
+</div>
+
+</a>
+
+
+<a href="#" class="contact-link">
+
+<div>
+<small>DIRECT</small>
+<strong>WhatsApp ↗</strong>
+</div>
+
+</a>
+
+
+<a href="#" class="contact-link">
+
+<div>
+<small>EMAIL</small>
+<strong>Email ↗</strong>
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-number">
+01 — START A PROJECT
+</div>
+
+<h2>
+Your footage.<br>
+My <span class="accent">edit.</span>
+</h2>
+
+<p>
+Send me your requirements, footage or simply tell me
+what kind of reel you want. We'll take it from there.
+</p>
+
+<a href="work.html" class="btn">
+See My Work →
+</a>
+
+</div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<div>© 2026 AFNAN</div>
+
+<div>
+VIDEO EDITOR · SHORT-FORM CONTENT
+</div>
+
+</footer>
+
+</div>
+
+</body>
+</html>
