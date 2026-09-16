@@ -1,103 +1,502 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Afnan — Video Editor</title>
 
 <style>
-body{
+*{
     margin:0;
-    background:#080808;
-    color:white;
-    font-family:Arial,sans-serif;
-    text-align:center;
+    padding:0;
+    box-sizing:border-box;
 }
+
+body{
+    background:#080808;
+    color:#f5f5f5;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1120px,90%);
+    margin:auto;
+}
+
+/* NAVIGATION */
 
 nav{
-    padding:25px;
-    border-bottom:1px solid #222;
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #202020;
 }
 
-nav a{
-    color:#aaa;
-    text-decoration:none;
-    margin:0 12px;
-    font-size:14px;
+.logo{
+    font-size:20px;
+    font-weight:800;
+    letter-spacing:4px;
 }
 
-main{
-    padding:100px 20px;
+.logo span{
+    display:block;
+    color:#777;
+    font-size:7px;
+    letter-spacing:3px;
+    margin-top:3px;
+}
+
+.navlinks{
+    display:flex;
+    gap:28px;
+    font-size:13px;
+    color:#888;
+}
+
+.navlinks a:first-child{
+    color:#fff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:78vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:90px 0;
+}
+
+.label{
+    color:#777;
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:22px;
 }
 
 h1{
-    font-size:60px;
-    margin:0;
+    font-size:clamp(58px,10vw,115px);
+    line-height:.86;
+    letter-spacing:-6px;
+    max-width:1000px;
 }
 
 .green{
     color:#b8ff5c;
 }
 
-p{
+.hero-text{
     color:#888;
-    font-size:16px;
-    line-height:1.7;
-    max-width:500px;
-    margin:25px auto;
+    max-width:510px;
+    font-size:15px;
+    line-height:1.8;
+    margin-top:32px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    margin-top:35px;
+    flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-block;
-    background:white;
+    background:#f5f5f5;
     color:#080808;
-    padding:14px 22px;
-    border-radius:30px;
-    text-decoration:none;
-    margin:8px;
+    padding:15px 23px;
+    border-radius:100px;
+    font-size:13px;
+    transition:.2s;
 }
 
-footer{
-    margin-top:100px;
-    padding:25px;
-    border-top:1px solid #222;
-    color:#666;
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid #333;
+    color:#aaa;
+    padding:15px 23px;
+    border-radius:100px;
+    font-size:13px;
+}
+
+/* INTRO */
+
+.intro-section{
+    border-top:1px solid #1d1d1d;
+    border-bottom:1px solid #1d1d1d;
+    padding:90px 0;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.intro-title{
+    font-size:45px;
+    line-height:1;
+    letter-spacing:-2px;
+}
+
+.intro-text{
+    color:#777;
+    font-size:14px;
+    line-height:1.9;
+    max-width:480px;
+}
+
+/* SERVICES */
+
+.services{
+    padding:90px 0;
+}
+
+.services-title{
+    font-size:45px;
+    letter-spacing:-2px;
+    margin-bottom:35px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.service{
+    min-height:220px;
+    padding:27px;
+    border:1px solid #292929;
+    border-radius:17px;
+    background:#0d0d0d;
+    transition:.25s;
+}
+
+.service:hover{
+    transform:translateY(-5px);
+    border-color:#444;
+}
+
+.number{
+    color:#555;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.service h3{
+    margin-top:65px;
+    font-size:20px;
+}
+
+.service p{
+    color:#777;
     font-size:12px;
+    line-height:1.6;
+    margin-top:10px;
+}
+
+/* CTA */
+
+.cta{
+    margin:30px 0 90px;
+    padding:80px 30px;
+    border:1px solid #292929;
+    border-radius:20px;
+    text-align:center;
+    background:
+    radial-gradient(circle at center,#191919,transparent 65%),
+    #0a0a0a;
+}
+
+.cta h2{
+    font-size:clamp(40px,7vw,75px);
+    line-height:.95;
+    letter-spacing:-4px;
+}
+
+.cta p{
+    color:#777;
+    margin:22px 0 30px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #171717;
+    padding:30px 0;
+    display:flex;
+    justify-content:space-between;
+    color:#666;
+    font-size:10px;
+    letter-spacing:.5px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    nav{
+        height:65px;
+    }
+
+    .navlinks{
+        gap:13px;
+        font-size:11px;
+    }
+
+    .hero{
+        min-height:78vh;
+        padding:65px 0;
+    }
+
+    h1{
+        font-size:59px;
+        letter-spacing:-4px;
+    }
+
+    .hero-text{
+        font-size:14px;
+    }
+
+    .intro-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .intro-title{
+        font-size:38px;
+    }
+
+    .services{
+        padding:70px 0;
+    }
+
+    .services-title{
+        font-size:38px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service{
+        min-height:190px;
+    }
+
+    .service h3{
+        margin-top:45px;
+    }
+
+    .cta{
+        padding:65px 20px;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:10px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<div class="container">
+
+<!-- NAV -->
+
 <nav>
+
+<a href="index.html" class="logo">
+AFNAN
+<span>VIDEO EDITOR</span>
+</a>
+
+<div class="navlinks">
 <a href="index.html">Home</a>
 <a href="work.html">Work</a>
 <a href="contact.html">Contact</a>
+</div>
+
 </nav>
 
-<main>
 
-<p>VIDEO EDITOR · SHORT-FORM CONTENT</p>
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="label">
+Video Editor · Short-Form Content
+</div>
 
 <h1>
 I make videos<br>
 people want to <span class="green">watch.</span>
 </h1>
 
-<p>
-Clean, engaging and purposeful video edits for creators,
-brands and businesses.
+<p class="hero-text">
+Clean, engaging and purposeful edits for creators,
+brands and businesses. Turning raw footage into
+content that feels worth watching.
 </p>
 
-<a class="btn" href="work.html">View My Work →</a>
+<div class="buttons">
 
-<a class="btn" href="contact.html">Let's Talk</a>
+<a href="work.html" class="btn">
+View My Work →
+</a>
 
-</main>
+<a href="contact.html" class="btn-outline">
+Let's Talk
+</a>
+
+</div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro-section">
+
+<div class="intro-grid">
+
+<div>
+
+<div class="label">
+The approach
+</div>
+
+<div class="intro-title">
+Less noise.<br>
+More <span class="green">impact.</span>
+</div>
+
+</div>
+
+<div>
+
+<p class="intro-text">
+I focus on strong hooks, clean cuts, engaging
+captions, B-roll and sound design — keeping the
+edit modern without making it unnecessarily
+complicated.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<div class="label">
+What I edit
+</div>
+
+<h2 class="services-title">
+Built for <span class="green">short-form.</span>
+</h2>
+
+<div class="service-grid">
+
+<div class="service">
+
+<div class="number">01</div>
+
+<h3>Talking Head</h3>
+
+<p>
+Captions · B-roll · Pacing · Storytelling
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="number">02</div>
+
+<h3>Fitness</h3>
+
+<p>
+Cinematic cuts · SFX · Motivation
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="number">03</div>
+
+<h3>Islamic Content</h3>
+
+<p>
+B-roll · AI Voice · Captions · Stories
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="label">
+Have footage?
+</div>
+
+<h2>
+Let's create something
+<span class="green">worth watching.</span>
+</h2>
+
+<p>
+Your footage. My edit.
+</p>
+
+<a href="contact.html" class="btn">
+Start a Project →
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-© 2026 AFNAN · VIDEO EDITOR
+
+<div>
+© 2026 AFNAN
+</div>
+
+<div>
+VIDEO EDITOR · SHORT-FORM CONTENT
+</div>
+
 </footer>
+
+</div>
 
 </body>
 </html>
