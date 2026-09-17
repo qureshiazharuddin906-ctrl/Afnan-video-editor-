@@ -1,308 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Work — Afnan | Video Editor</title>
 
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html{scroll-behavior:smooth}
-
 body{
-  background:#080808;
-  color:#f5f5f5;
-  font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#f5f5f5;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 a{
-  color:inherit;
-  text-decoration:none;
+    color:inherit;
+    text-decoration:none;
 }
 
 .container{
-  width:min(1100px,90%);
-  margin:auto;
+    width:min(1100px,90%);
+    margin:auto;
 }
 
-/* NAV */
-
 nav{
-  height:78px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom:1px solid #1d1d1d;
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #202020;
 }
 
 .logo{
-  font-size:19px;
-  font-weight:800;
-  letter-spacing:4px;
+    font-size:19px;
+    font-weight:800;
+    letter-spacing:4px;
 }
 
 .logo span{
-  display:block;
-  font-size:7px;
-  letter-spacing:3px;
-  color:#888;
-  margin-top:-2px;
+    display:block;
+    color:#777;
+    font-size:7px;
+    letter-spacing:3px;
+    margin-top:3px;
 }
 
 .navlinks{
-  display:flex;
-  gap:28px;
-  font-size:13px;
-  color:#999;
+    display:flex;
+    gap:28px;
+    font-size:13px;
+    color:#888;
 }
 
 .navlinks a:nth-child(2){
-  color:#fff;
+    color:#fff;
 }
 
-/* HEADER */
-
-.header{
-  padding:100px 0 65px;
+main{
+    padding:90px 0;
 }
 
 .label{
-  color:#777;
-  font-size:11px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin-bottom:18px;
+    color:#777;
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:20px;
 }
 
 h1{
-  font-size:clamp(55px,9vw,105px);
-  line-height:.9;
-  letter-spacing:-5px;
-  max-width:800px;
+    font-size:clamp(55px,9vw,105px);
+    line-height:.9;
+    letter-spacing:-5px;
 }
 
-.accent{
-  color:#b8ff5c;
+.green{
+    color:#b8ff5c;
 }
 
 .intro{
-  color:#888;
-  max-width:500px;
-  margin-top:28px;
-  font-size:15px;
-  line-height:1.7;
+    color:#777;
+    max-width:520px;
+    font-size:14px;
+    line-height:1.8;
+    margin-top:28px;
+    margin-bottom:75px;
 }
-
-/* FILTERS */
-
-.filters{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:50px;
-}
-
-.filter{
-  border:1px solid #292929;
-  background:#0d0d0d;
-  color:#999;
-  padding:11px 17px;
-  border-radius:100px;
-  font-size:12px;
-}
-
-.filter.active{
-  background:#f5f5f5;
-  color:#080808;
-  border-color:#f5f5f5;
-}
-
-/* WORK */
 
 .category{
-  margin-bottom:75px;
+    margin-bottom:75px;
 }
 
-.category-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:20px;
+.category-title{
+    font-size:30px;
+    margin-bottom:20px;
+    letter-spacing:-1px;
 }
 
-.category h2{
-  font-size:22px;
-  letter-spacing:-.5px;
-}
-
-.number{
-  color:#555;
-  font-size:11px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
+.work-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
 }
 
 .card{
-  border:1px solid #262626;
-  border-radius:16px;
-  overflow:hidden;
-  background:#0d0d0d;
-  transition:.25s;
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  border-color:#444;
+    border:1px solid #292929;
+    border-radius:18px;
+    overflow:hidden;
+    background:#0d0d0d;
 }
 
 .thumbnail{
-  height:290px;
-  background:
-    radial-gradient(circle at 70% 30%,#3a3a3a,transparent 28%),
-    linear-gradient(135deg,#292929,#0b0b0b);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    background:#171717;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#555;
+    font-size:11px;
+    letter-spacing:2px;
 }
 
-.play{
-  width:52px;
-  height:52px;
-  border:1px solid #888;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:15px;
+.thumbnail img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.duration{
-  position:absolute;
-  right:15px;
-  bottom:15px;
-  font-size:10px;
-  color:#aaa;
-  background:#090909;
-  padding:5px 8px;
-  border-radius:5px;
+.video-box{
+    background:#000;
 }
 
-.info{
-  padding:18px;
+.video-box video{
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+    object-fit:cover;
 }
 
-.info h3{
-  font-size:17px;
-  margin-bottom:6px;
+.card-info{
+    padding:20px;
 }
 
-.info p{
-  color:#777;
-  font-size:12px;
+.card-info h3{
+    font-size:17px;
+    margin-bottom:7px;
 }
 
-/* CTA */
-
-.cta{
-  margin:40px 0 90px;
-  padding:80px 30px;
-  border:1px solid #292929;
-  border-radius:20px;
-  text-align:center;
-  background:
-    radial-gradient(circle at center,#181818,#090909 65%);
+.card-info p{
+    color:#666;
+    font-size:11px;
 }
-
-.cta h2{
-  font-size:clamp(38px,6vw,68px);
-  line-height:1;
-  letter-spacing:-3px;
-  max-width:700px;
-  margin:auto;
-}
-
-.cta p{
-  color:#777;
-  margin:22px 0 30px;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 22px;
-  border-radius:100px;
-  background:#f5f5f5;
-  color:#080808;
-  font-size:13px;
-}
-
-/* FOOTER */
 
 footer{
-  border-top:1px solid #171717;
-  padding:30px 0;
-  display:flex;
-  justify-content:space-between;
-  color:#666;
-  font-size:11px;
+    border-top:1px solid #171717;
+    padding:30px 0;
+    display:flex;
+    justify-content:space-between;
+    color:#666;
+    font-size:10px;
 }
-
-/* MOBILE */
 
 @media(max-width:700px){
 
-  nav{
-    height:65px;
-  }
+    nav{
+        height:65px;
+    }
 
-  .navlinks{
-    gap:14px;
-    font-size:11px;
-  }
+    .navlinks{
+        gap:14px;
+        font-size:11px;
+    }
 
-  .header{
-    padding:70px 0 45px;
-  }
+    main{
+        padding:65px 0;
+    }
 
-  h1{
-    font-size:60px;
-    letter-spacing:-4px;
-  }
+    h1{
+        font-size:59px;
+        letter-spacing:-4px;
+    }
 
-  .intro{
-    font-size:14px;
-  }
+    .work-grid{
+        grid-template-columns:1fr;
+    }
 
-  .grid{
-    grid-template-columns:1fr;
-  }
+    .category-title{
+        font-size:26px;
+    }
 
-  .thumbnail{
-    height:250px;
-  }
+    footer{
+        flex-direction:column;
+        gap:10px;
+    }
 
-  .category{
-    margin-bottom:60px;
-  }
-
-  .cta{
-    padding:65px 20px;
-  }
-
-  footer{
-    flex-direction:column;
-    gap:10px;
-  }
 }
+
 </style>
 </head>
 
@@ -326,282 +228,211 @@ AFNAN
 </nav>
 
 
-<!-- HEADER -->
+<main>
 
-<div class="header">
-
-<div class="label">Selected Work</div>
+<div class="label">
+Selected work
+</div>
 
 <h1>
-Video edits<br>
-that <span class="accent">speak.</span>
+My <span class="green">work.</span>
 </h1>
 
 <p class="intro">
-Different styles. Different stories.
-One goal — creating content people want to watch.
+A collection of short-form edits focused on clean visuals,
+strong pacing, storytelling and retention.
 </p>
-
-</div>
-
-
-<!-- FILTERS -->
-
-<div class="filters">
-
-<div class="filter active">All</div>
-<div class="filter">Talking Head</div>
-<div class="filter">Fitness</div>
-<div class="filter">Islamic</div>
-<div class="filter">Business</div>
-<div class="filter">Cinematic</div>
-<div class="filter">Typography</div>
-
-</div>
 
 
 <!-- TALKING HEAD -->
 
-<div class="category">
+<section class="category">
 
-<div class="category-head">
-<h2>Talking Head</h2>
-<div class="number">01 — 02</div>
-</div>
+<div class="label">01</div>
+<h2 class="category-title">Talking Head</h2>
 
-<div class="grid">
+<div class="work-grid">
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:32</div>
-</div>
-<div class="info">
-<h3>Motivational Talking Head</h3>
-<p>Captions · B-roll · Sound Design</p>
+<div class="thumbnail">VIDEO COMING SOON</div>
+<div class="card-info">
+<h3>Talking Head Edit</h3>
+<p>Captions · B-roll · Pacing</p>
 </div>
 </div>
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:28</div>
-</div>
-<div class="info">
-<h3>Storytelling Reel</h3>
-<p>Clean Cuts · Pacing · Captions</p>
+<div class="thumbnail">VIDEO COMING SOON</div>
+<div class="card-info">
+<h3>Creator Short</h3>
+<p>Storytelling · Retention</p>
 </div>
 </div>
 
 </div>
-</div>
+</section>
 
 
 <!-- FITNESS -->
 
-<div class="category">
+<section class="category">
 
-<div class="category-head">
-<h2>Fitness</h2>
-<div class="number">02 — 02</div>
-</div>
+<div class="label">02</div>
+<h2 class="category-title">Fitness</h2>
 
-<div class="grid">
+<div class="work-grid">
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:30</div>
-</div>
-<div class="info">
-<h3>Fitness Motivation</h3>
-<p>Cinematic Cuts · Sound Design</p>
+<div class="thumbnail">VIDEO COMING SOON</div>
+<div class="card-info">
+<h3>Cinematic Fitness</h3>
+<p>Cuts · SFX · Motivation</p>
 </div>
 </div>
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:22</div>
-</div>
-<div class="info">
-<h3>Gym Transformation</h3>
-<p>Fast Pacing · SFX · Typography</p>
+<div class="thumbnail">VIDEO COMING SOON</div>
+<div class="card-info">
+<h3>Gym Reel</h3>
+<p>Pacing · Sound Design</p>
 </div>
 </div>
 
 </div>
-</div>
+</section>
 
 
 <!-- ISLAMIC -->
 
-<div class="category">
+<section class="category">
 
-<div class="category-head">
-<h2>Islamic Content</h2>
-<div class="number">03 — 02</div>
-</div>
+<div class="label">03</div>
+<h2 class="category-title">Islamic Content</h2>
 
-<div class="grid">
+<div class="work-grid">
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:40</div>
-</div>
-<div class="info">
-<h3>Islamic Reminder</h3>
+<div class="thumbnail">VIDEO COMING SOON</div>
+<div class="card-info">
+<h3>Islamic Story</h3>
 <p>B-roll · AI Voice · Captions</p>
 </div>
 </div>
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:36</div>
-</div>
-<div class="info">
-<h3>Story / Reminder</h3>
-<p>Cinematic B-roll · Typography</p>
+<div class="thumbnail">VIDEO COMING SOON</div>
+<div class="card-info">
+<h3>Reminder Reel</h3>
+<p>Visual Storytelling</p>
 </div>
 </div>
 
 </div>
-</div>
+</section>
 
 
 <!-- BUSINESS -->
 
-<div class="category">
+<section class="category">
 
-<div class="category-head">
-<h2>Business / Product</h2>
-<div class="number">04 — 02</div>
-</div>
+<div class="label">04</div>
+<h2 class="category-title">Business / Product</h2>
 
-<div class="grid">
+<div class="work-grid">
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:25</div>
-</div>
-<div class="info">
-<h3>Product Showcase</h3>
-<p>Clean Edit · Motion · Typography</p>
+<div class="thumbnail">VIDEO COMING SOON</div>
+<div class="card-info">
+<h3>Product Reel</h3>
+<p>Clean · Modern · Premium</p>
 </div>
 </div>
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:28</div>
-</div>
-<div class="info">
-<h3>Brand Reel</h3>
-<p>Product Shots · Pacing · SFX</p>
+<div class="thumbnail">VIDEO COMING SOON</div>
+<div class="card-info">
+<h3>Business Short</h3>
+<p>Hook · Pacing · CTA</p>
 </div>
 </div>
 
 </div>
-</div>
+</section>
 
 
 <!-- CINEMATIC -->
 
-<div class="category">
+<section class="category">
 
-<div class="category-head">
-<h2>Cinematic</h2>
-<div class="number">05 — 02</div>
-</div>
+<div class="label">05</div>
+<h2 class="category-title">Cinematic</h2>
 
-<div class="grid">
+<div class="work-grid">
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:32</div>
-</div>
-<div class="info">
-<h3>Cinematic Story</h3>
-<p>Color · Transitions · Sound Design</p>
+<div class="thumbnail">VIDEO COMING SOON</div>
+<div class="card-info">
+<h3>Cinematic Short</h3>
+<p>Color · SFX · Atmosphere</p>
 </div>
 </div>
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:38</div>
-</div>
-<div class="info">
-<h3>Visual Storytelling</h3>
-<p>Atmosphere · Pacing · Music</p>
+<div class="thumbnail">VIDEO COMING SOON</div>
+<div class="card-info">
+<h3>Visual Story</h3>
+<p>Film Look · Pacing</p>
 </div>
 </div>
 
 </div>
-</div>
+</section>
 
 
 <!-- TYPOGRAPHY -->
 
-<div class="category">
+<section class="category">
 
-<div class="category-head">
-<h2>Typography / Motion</h2>
-<div class="number">06 — 02</div>
-</div>
+<div class="label">06</div>
+<h2 class="category-title">Typography / Motion</h2>
 
-<div class="grid">
+<div class="work-grid">
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:21</div>
+
+<div class="video-box">
+
+<video controls poster="thumbnail.png">
+<source src="lv_0_20260917153408.mp4" type="video/mp4">
+Your browser does not support video.
+</video>
+
 </div>
-<div class="info">
-<h3>Typography Reel</h3>
-<p>Motion Type · Timing · SFX</p>
+
+<div class="card-info">
+<h3>Cutting Footage</h3>
+<p>Typography · AI Voice · SFX</p>
 </div>
+
 </div>
+
 
 <div class="card">
-<div class="thumbnail">
-<div class="play">▶</div>
-<div class="duration">00:24</div>
-</div>
-<div class="info">
-<h3>Motion Graphics</h3>
-<p>Animated Text · Transitions</p>
-</div>
+
+<div class="thumbnail">VIDEO COMING SOON</div>
+
+<div class="card-info">
+<h3>Motion Typography</h3>
+<p>Text Animation · SFX</p>
 </div>
 
 </div>
-</div>
-
-
-<!-- CTA -->
-
-<div class="cta">
-
-<div class="label">Have footage?</div>
-
-<h2>
-Let's create something
-<span class="accent">worth watching.</span>
-</h2>
-
-<p>
-Tell me about your project and let's get started.
-</p>
-
-<a href="contact.html" class="btn">
-Let's Talk →
-</a>
 
 </div>
+</section>
+
+
+</main>
 
 
 <footer>
@@ -615,4 +446,4 @@ Let's Talk →
 </div>
 
 </body>
-  </html>
+</html>
